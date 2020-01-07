@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 import java.util.Scanner;
 
 /**
@@ -48,11 +48,10 @@ public class ReverseInput {
     }
 
     public static void main(String[] args){
-        ReverseInput r = new ReverseInput();
         String input = inputStr("请输入3位数字：\n");
         Boolean b = checkInput(input);
         if(b){
-            String s = r.reverseStr(input);
+            String s = reverseStr(input);
             System.out.println("反转后:"+s);
         }
     }

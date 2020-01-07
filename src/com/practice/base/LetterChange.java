@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 
 /**
  * @ClassName LetterChange
@@ -8,7 +8,7 @@ package com.practice;
  **/
 public class LetterChange {
 
-    public String LetterChange(String input){
+    public String letterChange(String input){
         char[] tmp_arr = input.toCharArray();
         for(int i=0;i<input.length();i++){
 
@@ -18,7 +18,7 @@ public class LetterChange {
                 tmp_arr[i] += 32;
             }else{
                 System.out.println("请输入全字母字符串！");
-                continue;
+
             }
         }
         return String.valueOf(tmp_arr);
@@ -27,7 +27,7 @@ public class LetterChange {
     public static void main(String[] args){
         String s = ReverseInput.inputStr("请输入字符串：");
         LetterChange l = new LetterChange();
-        s = l.LetterChange(s);
+        s = l.letterChange(s);
         System.out.println(s);
     }
 }

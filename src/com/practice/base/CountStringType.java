@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 
 /**
  * @ClassName CountStringType
@@ -7,7 +7,7 @@ package com.practice;
  * @Date 2020/1/4 10:36 下午
  **/
 public class CountStringType {
-    public String CountStringType(String input){
+    public String countStringType(String input){
         char[] charArg = input.toCharArray();
         int letterNum = 0;
         int numberNum = 0;
@@ -23,13 +23,12 @@ public class CountStringType {
                 blankNum++;
             }else otherNum++;
         }
-        String s = "包含字母："+ letterNum+"个; \n包含数字："+numberNum+"个;\n包含空格："+blankNum+"个;\n包含其他字符："+otherNum+"个。\n";
-        return s;
+        return "包含字母："+ letterNum+"个; \n包含数字："+numberNum+"个;\n包含空格："+blankNum+"个;\n包含其他字符："+otherNum+"个。\n";
     }
     public static void main(String[] args){
         String s = ReverseInput.inputStr("输入字符串:\n");
         CountStringType c = new CountStringType();
-        System.out.println(c.CountStringType(s));
+        System.out.println(c.countStringType(s));
 
     }
 }

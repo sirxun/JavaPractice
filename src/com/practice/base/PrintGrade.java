@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 
 /**
  * @ClassName PrintGrade
@@ -7,9 +7,10 @@ package com.practice;
  * @Date 2020/1/4 10:17 下午
  **/
 public class PrintGrade {
-    public char PrintGrade(int input){
+    public char printGrade(int input){
         char grade;
-        grade = input>=90 ?'A': input<90&&input>=60?'B':'C';
+        grade = input>=90 ?'A':
+                (input<90 && input>=60) ?'B': 'C';
         return grade;
     }
     public static void main(String[] args){
@@ -22,7 +23,7 @@ public class PrintGrade {
             System.out.println("请输入数字！");
             return;
         }
-        char x = p.PrintGrade(tmp);
+        char x = p.printGrade(tmp);
         System.out.println(x);
     }
 }

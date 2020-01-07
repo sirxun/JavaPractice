@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 
 /**
  * @ClassName BubbleSort
@@ -8,15 +8,13 @@ package com.practice;
  **/
 
 public class BubbleSort {
-    public int[] BubbleSort(int[] input){
+    public int[] bubbleSort(int[] input){
         for(int i=1; i<input.length;i++){
             for(int j=0;j<input.length-i;j++){
                 if(input[j]>input[j+1]) {
                     int tmp = input[j];
                     input[j] = input[j + 1];
                     input[j + 1] = tmp;
-                }else {
-                    continue;
                 }
             }
         }
@@ -39,11 +37,11 @@ public class BubbleSort {
 
 //        第一种 冒泡排序
         BubbleSort b = new BubbleSort();
-        l = b.BubbleSort(l);
+        l = b.bubbleSort(l);
 ////        第二种方法 使用java.util.Arrays库排序方法
 //        Arrays.sort(l);
-        for(int i = 0;i<l.length;i++){
-            System.out.println(l[i]);
+        for (int value : l) {
+            System.out.println(value);
         }
 
     }

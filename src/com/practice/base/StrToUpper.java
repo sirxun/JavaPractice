@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.base;
 
 /**
  * @ClassName StrToUpper
@@ -8,7 +8,7 @@ package com.practice;
  **/
 public class StrToUpper {
     public Boolean checkUpperCase(String input){
-        if(input.length()>1 || input.length()<=0){
+        if(input.length() != 1){
             System.out.println("请输入一个字母");
             return false;
         }else{

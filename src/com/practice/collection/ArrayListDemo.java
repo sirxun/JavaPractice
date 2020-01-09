@@ -11,27 +11,31 @@ import java.util.*;
  **/
 public class ArrayListDemo {
     public static void arrayListDemo1(){
-        ArrayList l = new ArrayList();
+        ArrayList<Integer> l = new ArrayList<Integer>();
         System.out.println("请输入数字：\n");
         for(int i=0;i<3;i++){
             String s = ReverseInput.inputStr("");
             int input = Integer.parseInt(s);
             l.add(input);
         }
-        Iterator i = l.iterator();
-        while (i.hasNext()){
-            System.out.print(i.next()+" ");
+        for (Object o : l) {
+            System.out.print(o + " ");
         }
         // 从小到大顺序输出
         Collections.sort(l);
         System.out.println(l);
 
         // 从大到小顺序输出
-        Collections.sort(l,Collections.reverseOrder());
+//        Collections.sort(l,Collections.reverseOrder());
+        l.sort(Collections.reverseOrder());
         System.out.println(l);
 
         // 随机输出
-        ArrayList<Integer> randomList = new ArrayList(l.size());
+        // 第一种
+        Collections.shuffle(l);
+        System.out.println(l);
+        // 第二种
+        ArrayList<Integer> randomList = new ArrayList<>(l.size());
         do{
             int randomIndex = Math.abs(new Random().nextInt(l.size()));
             randomList.add((Integer) l.remove(randomIndex));
@@ -40,23 +44,23 @@ public class ArrayListDemo {
     }
 
     public static void arrayListDemo2(){
-        ArrayList<String> al = new ArrayList();
-        ArrayList<String> al1 = new ArrayList();
+        ArrayList<String> al = new ArrayList<>();
+        ArrayList<String> al1 = new ArrayList<>();
         al.add("小编");
         al.add("小王");
         al.add("小张");
         al1.add("95分");
         al1.add("94分");
         al1.set(1,"95分");
-        Iterator i = al.iterator();
-        Iterator i1 = al1.iterator();
+        Iterator<String> i = al.iterator();
+        Iterator<String> i1 = al1.iterator();
         while (i.hasNext() && i1.hasNext()){
             System.out.println(i.next() + ":"+i1.next());
         }
     }
 
     public static void hashMapdemo2(){
-        HashMap hm = new HashMap();
+        HashMap<String, String> hm = new HashMap<String, String>();
         hm.put("key","username");
         hm.put("value","password");
         String username = ReverseInput.inputStr("请输入用户名：\n");
@@ -72,19 +76,19 @@ public class ArrayListDemo {
     }
 
     public static void listDemo(){
-        ArrayList<Integer> al1 = new ArrayList();
+        ArrayList<Integer> al1 = new ArrayList<>();
         al1.add(2);
         al1.add(1);
         al1.add(4);
         al1.add(6);
-        ArrayList<Integer> al2 = new ArrayList();
+        ArrayList<Integer> al2 = new ArrayList<>();
         al2.add(4);
         al2.add(15);
         al2.add(5);
         al2.add(25);
         al2.add(35);
         ArrayList<Integer> al3 = new ArrayList<Integer>();
-        al3 = (ArrayList) al1.clone();
+        al3 = (ArrayList<Integer>) al1.clone();
         al3.removeAll(al2);
         System.out.println(al1);
         al3.addAll(al2);
@@ -93,8 +97,8 @@ public class ArrayListDemo {
     }
 
     public static void listToMap(){
-        ArrayList<Integer> al1 = new ArrayList();
-        HashMap<Integer, Integer> hm = new HashMap();
+        ArrayList<Integer> al1 = new ArrayList<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();
         for(int i=0;i<20;i++){
             al1.add(i);
         }
@@ -111,7 +115,7 @@ public class ArrayListDemo {
     public static void mapDemo(){
         String s = ReverseInput.inputStr("请输入1-20之间的数字：\n");
         int input = Integer.parseInt(s);
-        HashMap<Integer, Integer> hm = new HashMap();
+        HashMap<Integer, Integer> hm = new HashMap<>();
         int n = 20;
         for(int i=0; i<n/2;i++){
             hm.put(i+1, i+n/2);
@@ -136,10 +140,10 @@ public class ArrayListDemo {
 
     public static void main(String[] args){
 
-//        arrayListDemo1();
+        arrayListDemo1();
 //        arrayListDemo2();
 //        hashMapdemo2();
-        listDemo();
+//        listDemo();
 //        listToMap();
 //        mapDemo();
     }

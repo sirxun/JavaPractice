@@ -11,7 +11,7 @@ public class Student {
     float endGr;
     float midRate;
     float endRate;
-    float totalGr;
+//    float totalGr;
     int studentId;
     String name;
     String sex;

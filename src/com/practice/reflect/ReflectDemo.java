@@ -8,6 +8,7 @@ import java.lang.reflect.Constructor;
 import java.lang.Class;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.AbstractList;
 
 
 /**
@@ -17,7 +18,6 @@ import java.lang.reflect.Method;
  * @Date 2020/1/6 3:51 下午
  **/
 public class ReflectDemo {
-
     public static void reflectDemo1() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<ColaEmployee> cola = ColaEmployee.class;
         Constructor<ColaEmployee> constructor = cola.getConstructor(String.class, int.class);

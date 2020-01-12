@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="JavaServlet:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaServlet_war_exploded</output-path>
+    <root id="archive" name="JavaServlet_war_exploded.war">
+      <element id="javaee-facet-resources" facet="JavaServlet/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaServlet" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-8.0.18" />
+          <element id="library" level="project" name="fastjson-1.2.62" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

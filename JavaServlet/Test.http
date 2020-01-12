@@ -1,0 +1,35 @@
+GET http://127.0.0.1:8080/JavaServlet_war_exploded/login?name=wang@hui&pwd=password
+Accept: application/json
+
+###
+GET http://127.0.0.1:8080/JavaServlet_war_exploded/hw
+Accept: application/json
+
+###
+POST http://127.0.0.1:8080/JavaServlet_war_exploded/login
+Content-Type: application/json
+
+{
+  "userName": "wang@hui",
+  "password": "password"
+}
+
+###
+POST http://127.0.0.1:8080/JavaServlet_war_exploded/register
+Content-Type: application/json
+
+{
+  "userName": "wang@hui",
+  "password": "password"
+}
+
+###
+POST http://172.16.11.74:5000/api/v1/okd/get_task_state
+Content-Type: application/json
+
+[
+  {"task_id": "11"},
+  {"task_id": "14"}
+]
+
+###

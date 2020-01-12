@@ -12,9 +12,9 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         OptFile optFile = new OptFile();
-        optFile.setDocumentPath("/Users/wanghui/JavaPractice/src/com/practice/io/writeread/");
+        optFile.setDocumentPath("/Users/wanghui/JavaPractice/BasePractice/src/com/practice/io/writeread/");
         File f = optFile.mkDocument();
-        optFile.setFilePath("/Users/wanghui/JavaPractice/src/com/practice/io/writeread/ss/s.txt");
+        optFile.setFilePath("/Users/wanghui/JavaPractice/BasePractice/src/com/practice/io/writeread/ss/s.txt");
         String filePath = optFile.getFilePath();
         optFile.writeContent(filePath,"hello world!", false);
         optFile.readContent(filePath);
